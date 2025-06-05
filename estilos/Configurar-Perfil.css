@@ -1,0 +1,303 @@
+/*Css de todo el cuerpo de la pagina*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('imagenes/nocturno.jpg'); /*Ruta de tu imagen de fondo*/
+    background-size: cover;
+    background-attachment: fixed; /*Fija la imagen de fondo*/
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*Centra contenido verticalmente*/
+    color: #fff;
+    overflow-x: hidden; /*Oculta desplazamiento horizontal*/
+}
+
+
+/*Propiedades del boton a pagina principal (Esquina derecha)*/
+.Pagina-Principal {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ed756a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000; /*Asegura que esté por encima del contenido*/
+    color: white;
+    font-family: 'Arial', sans-serif; /*Fuente de texto*/
+}
+
+
+/*Reaccion del boton, al poner el cursos encima*/
+.Pagina-Principal:hover {
+    background-color: #712825;
+}
+.Pagina-Principal a {
+    text-decoration: none;
+    color: white;
+}
+.Pagina-Principal a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+
+/*Caracteristicas/formato del contenedor todo el formulario, excepto los 2 botones de los costados y el avatar*/
+.Contenedor-General {
+    background: rgba(0, 0, 0, 0.5); /*Opacidad y color aplicada al fondo del contenedor*/
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 350px; /*Ancho máximo del contenedor*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto; /* Espacio alrededor del formulario */
+}
+
+/*Efecto del formulario de agrandar*/
+.Contenedor-General:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+/*Formato titulo del formulario*/
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ff6f61;
+}
+
+/*Tamaño de los input(Ingreso de datos)*/
+.horizontal-form {
+    width: 100%; 
+}
+
+/*Acomodo del formulario*/
+.formulario-grupo {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Alinea elementos al centro*/
+}
+
+/*Estilo nombres de los campos*/
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #edd81f;
+}
+
+/*Estilo de los inputs(Area del ingreso de los datos)*/
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #c1bebef3; /*Color area de los imputs*/
+    border-radius: 5px;
+    width: calc(100% - 20px); /*Ancho ajustado para compensar el padding*/
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con opacidad */
+}
+
+/*Efecto al seleccionar el campo a ingresar datos*/
+input:focus {
+    border-color: #c23b3b;
+    outline: none;
+}
+
+/*Formato del boton Guardar del formulario*/
+button {
+    padding: 10px 20px;
+    background-color: #e77368;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+/*Reaccion del boton con el cursor*/
+button:hover {
+    background-color: #ad2a25;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Formato/caracteristicas de la muestra de datos guardados(Funcion JS)*/
+.profile-output {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #4e4376;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    display: none; /*Inicialmente oculto*/
+    overflow-y: auto; /*Permitir desplazamiento si es necesario*/
+}
+
+/*Formato/caracteristicas de la imagen cargada(Funcion JS)*/
+.profile-output img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/*Formato/caracteristicas de los parrafos(datos mostrados) JS*/
+.profile-output p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ffeb3b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Avatar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); /* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos hijos */
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /*Espacio entre las flechas y el contenedor */
+}
+
+.Avatar img {
+    width: 250px; 
+    height: auto;
+    border-radius: 50%; /*Ajusta el borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega sombra */
+    transition: transform 0.3s ease-in-out; 
+    display: block; 
+    margin-bottom: 10px; /*Margen inferior para separar del botón de selección */
+}
+
+.avatar-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/*Efecto de resplandor dorado cuando el avatar está seleccionado*/
+.avatar-selected {
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.8); /*Resplandor dorado*/
+    outline: 9px solid rgba(255, 215, 0, 0.5); /*Opcional: contorno dorado*/
+}
+
+/*Color al pasar el mouse sobre las flechas */
+.avatar-button:hover {
+    color: #4CAF50;
+}
+
+/*Estilo específico para el botón "Seleccionar Avatar"*/
+#select-avatar {
+    background-color: #ff6f61; 
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*Efecto al pasar el mouse sobre el botón "Seleccionar Avatar"*/
+#select-avatar:hover {
+    background-color: #852825;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Propiedades del boton*/
+.Configuracion-Perfil {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    z-index: 1000; /*Asegura que esté por encima del contenido*/
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/*Efecto del cursor sobre el boton*/
+.Configuracion-Perfil:hover {
+    background-color: #852825;
+    transform: scale(1.1); /*Efecto de escala al pasar el mouse*/
+}
+
+.Configuracion-Perfil img {
+    width: 20px; /*Ajusta el tamaño del icono*/
+    height: auto;
+}

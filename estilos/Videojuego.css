@@ -1,0 +1,327 @@
+/*Formato principal*/
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /*Altura del contenedor*/
+    background-image: url('imagenes/Paisaje-Mario.png'); /*Ruta de tu imagen*/
+    background-size: cover; /*Ajusta la imagen para cubrir todo el contenedor*/
+    background-position: center;
+    background-repeat: no-repeat; /*Evita la repetición de la imagen*/
+    position: relative;
+    z-index: 0; /*Asegurar que la imagen este detras de todos los elementos en pantalla*/
+    color: white;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+#home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+
+/*Estilos para la pantalla de introducción*/
+#intro-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para la pantalla de introducción */
+#intro-screen h1 {
+    font-size: 48px;
+    margin-bottom: 22px;
+    text-align: center;
+    animation: pulse 2s infinite; /*Animación que se repite infinitamente */
+}
+
+/*Estilos para la pantalla del juego*/
+#game-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/*Estilos para el menú del juego*/
+#game-menu {
+    display: flex;
+    flex-direction: row; /*Cambiado a 'row' para mostrar los botones en horizontal*/
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /*Asegura que esté por encima del fondo */
+}
+
+/*Estilos para los botones*/
+.game-button, .level-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /*Transición suave del color de fondo*/
+}
+
+/*Pulsor sobre el boton*/
+.game-button:hover, .level-button:hover {
+    background-color: #45a049;
+}
+
+#game-screen h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: pulse 2s infinite; /*Animación que se repite infinitamente*/
+}
+
+#change-timer-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #c8cb18; /* Color naranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#change-timer-button:hover {
+    background-color: #25d715; /* Color naranja oscuro al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para los botones */
+.game-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+    background-color: #45a049;
+}
+
+.level-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.level-button:hover {
+    background-color: #45a049;
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; /*Asegura que esté por encima de otros elementos*/
+}
+
+/*Animación de pulso para el título*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*Estilos para el lienzo del juego*/
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 100%; /*Ajustar al 100% del contenedor */
+    max-width: 800px; /*Ancho máximo del lienzo*/
+    height: auto;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilos para los números aleatorios*/
+#equation-container {
+    font-size: 72px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /*Sombra del texto*/
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*Sombra*/
+}
+
+/*Estilos para el campo de ingreso de datos*/
+input[type="number"] {
+    padding: 15px;
+    font-size: 24px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin-top: 20px;
+    background-color: #000000f1;
+    color: #fefefe;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /*Transiciones*/
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+}
+
+
+
+
+
+/*Eliminar los botones de incremento/decremento en los campos numéricos*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /*Remove the margin*/
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: textfield; /*Firefox*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilos para la barra de progreso*/
+#progress-bar-container {
+    width: 80%;
+    margin: 20px auto; /*Centrado horizontalmente*/
+    background-color: #000000;
+    border-radius: 10px; /*Borde redondeado*/
+    height: 30px;
+    overflow: hidden; /*Para ocultar el overflow de la barra cuando se llena*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*Sombra suave*/
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50; /*Color inicial de la barra*/
+    transition: width 0.3s ease-in-out; /*Transición*/
+    border-radius: 10px; /*Borde redondeado*/
+}
+
+#player-level {
+    margin-left: 10px; /*Espacio a la izquierda de la barra de progreso*/
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute; /*Asegura que el texto se mantenga en el mismo lugar*/
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animación de brillo dorado */
+@keyframes shine {
+    0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+}
+
+/*Aplicar la animación al cuadro del nivel */
+#player-level {
+    animation: shine 1s infinite; /* Repetir la animación infinitamente */
+}

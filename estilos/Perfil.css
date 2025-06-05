@@ -1,0 +1,188 @@
+/*Formato del cuerpo completo de la pagina*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('imagenes/nocturno.jpg'); /*Ruta de tu imagen de fondo*/
+    background-size: cover;
+    background-attachment: fixed; /*Fija la imagen de fondo*/
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*Centra contenido verticalmente*/
+    color: #fff;
+    overflow-x: hidden; /*Oculta desplazamiento horizontal*/
+}
+
+
+
+
+
+
+/*Formato del boton (Pagina Principal)*/
+.Pagina-Principal {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000; /*Asegura que esté por encima del contenido*/
+    color: white;
+    font-family: 'Arial', sans-serif; /*Fuente de texto*/
+}
+
+/*Efecto del boton con cursor*/
+.Pagina-Principal:hover {
+    background-color: #732623;
+}
+
+/*Formato de las letras*/
+.Pagina-Principal a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Formato de las letras al usar el cursor*/
+.Pagina-Principal a:hover {
+    text-decoration: underline; /*Subrayado al pasar el mouse*/
+}
+
+
+
+
+
+
+
+
+
+
+/*Ubicacion del avatar*/
+.Avatar {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/*Formato del avatar*/
+.Avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.Imagen-Perfil img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover; /*Asegura que la imagen cubra el contenedor sin deformarse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+/*Formato/Caracteristicas del contenedor de datos*/
+.Contenedor {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Titulo del contenedor*/
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ff6f61;
+}
+
+/*Formato/ Caracteristicas de los campos a mostrar (Subtitulos)*/
+.Datos-Perfil {
+    text-align: left;
+}
+.Datos-Perfil p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.Datos-Perfil strong {
+    color: #ffeb3b;
+}
+.Datos-Perfil span {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/*Ubicacion, tamaño de la barra de progreso*/
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden; /*Para ocultar cualquier desbordamiento*/
+}
+
+/*Formato, colores de la barra de progreso*/
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #ff6f61;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-image: linear-gradient(to right, #00ff00, #00ff00); /*Degradado verde*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Formato/Caracteristicas del boton de configurar perfil*/
+.Configuracion-Perfil {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    z-index: 1000; /*Asegura que esté por encima del contenido*/
+    transition: background-color 0.3s, transform 0.3s;
+}
+.Configuracion-Perfil:hover {
+    background-color: #7e2724;
+    transform: scale(1.1); /*Efecto de escala al pasar el mouse*/
+}
+.Configuracion-Perfil img {
+    width: 20px; /*Ajusta el tamaño del icono*/
+    height: auto;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Formulario-edusite" content="width=device-width, initial-scale=1.0">
+
+    <!--VINCULACION AL ARCHIVO CSS-->
+    <link rel="stylesheet" href="estilos/Login_EDUsite.css">
+
+    <!--Recurso de iconos(API MATERIAL SYMBOLS - "BoxIcons")-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+
+    <title>Inicio De Sesion EDUsite</title>
+
+</head>
+
+<body>
+
+    <!--Boton esquina izquierda a pagina principal-->
+    <div class="Principal-page"> <li><a href="Pagina_Principal.html">Pagina Principal</a> </li> </div>
+    
+
+    <!--CONTENEDOR DE REGISTRO "MUCHO OJO CON LOS NOMBRES QUE PONES A LA CLASES!"-->
+    <div class="contenedor-form sign-up">
+
+        <!--MENU INTERACTIVO DE INICIO DE SESION-->
+        <div class="bienvenido-denuevo">
+
+            <!--MENSAJE PARA CAMBIAR DE MENU-->
+            <div class="mensaje-interactivo">
+                <h2>Bienvenido a EDUcraft</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                <button class="sign-up-btn">Iniciar Sesion</button> <!--Boton interactivo-->
+            </div>
+        </div>
+
+        <!--FORMULARIO PARA CREAR CUENTA(REGISTRARSE)-->
+        <form class="formulario" action="registro.php" method="POST">
+            <h2 class="cabecera-formulario">Crear una cuenta</h2>
+
+            <!--ICONOS DEL FORMULARIO PARA CREAR CUENTA CON FB Y INSTAGRAM (API)-->
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+            </div>
+
+            <!--FORMULARIO INGRESO DE DATOS PARA REGISTRARSE-->
+            <p class="cuenta-gratis">Crear una cuenta gratis</p> <!--Mensaje del formulario-->
+            <!--Todo lo que diga id y name, es para darle seguimiento a la base de datos ya que se comunican por medio del ID-->
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="email" id="correo" name="correo" placeholder="Email" required>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+            <input type="button" value="Registrarse">
+        </form>
+    </div>
+
+    <!--CONTENEDOR DE INICIO DE SESION, "MUCHO OJO CON LOS NOMBRES QUE LES PONES A LAS CLASES Y DEMAS"-->
+    <div class="contenedor-form sign-in">
+        <form class="formulario">
+            <h2 class="cabecera-formulario">Iniciar Sesion</h2>
+
+            <!--ICONOS DEL FORMULARIO DE INICIO DE SESION CON FB Y INSTAGRAM (API)-->
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+            </div>
+
+            <!--FORMULARIO INGRESO DE DATOS PARA INICIAR SESION-->
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Contraseña">
+            <input type="button" value="Iniciar Sesion">
+        </form>
+
+        <!--MENU INTERACTIVO PARA REGISTRARSE-->
+        <div class="bienvenido-denuevo">
+            <!--MENSAJE PARA CAMBIAR DE MENU-->
+            <div class="mensaje-interactivo">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                <button type="submit" class="sign-in-btn">Registrarse</button> <!--Boton interactivo-->
+            </div>
+        </div>
+    </div>
+
+    <!--VINCULACION CON EL ARCHIVO JAVASCRIPT-->
+    <script src="JS/Login_EDUsite.js"></script>
+</body>
+</html>

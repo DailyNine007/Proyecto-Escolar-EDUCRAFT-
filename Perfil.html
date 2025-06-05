@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Jugador</title>
+
+    <!--Referencia CSS-->
+    <link rel="stylesheet" href="estilos/perfil.css">
+
+    <!--Referencia de los iconos (API)-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!--Boton a Pagina principal-->
+    <button class="Pagina-Principal"> <a href="Pagina_Principal.html">Página Principal</a></button>
+
+
+    <!--Muestra del avatar-->
+    <div class="Avatar">
+        <img id="avatar" name="avatar" src="" alt="Avatar">
+    </div>
+    
+    
+    <!--A configuracion de perfil (ICONO)-->
+    <a href="Configurar-Perfil.html" class="Configuracion-Perfil">
+    <span class="material-symbols-outlined">build</span></a>
+    
+
+
+
+    <!--Contenedor de datos del jugador-->
+    <div class="Contenedor">
+
+        <!--Titulo-->
+        <h1>Perfil del Jugador</h1>
+
+
+        <!--Imagen de perfil(Mostrar)-->
+        <div class="Imagen-Perfil">
+            <img id="profileImage" name="profileImage" src="" alt="Imagen de Perfil">
+        </div>
+        
+
+
+        <!--Datos de jugador-->
+        <div id="profileData" class="Datos-Perfil">
+            <p><strong>Nombre de Padre/Tutor:</strong> <span id="parentName" name="parentName"></span></p>
+            <p><strong>Tiempo de estudio al dia:</strong> <span id="EstudioDia" name="EstudioDia"></span></p>
+            <p><strong>Nombre:</strong> <span id="firstName" name="firstName"></span></p>
+            <p><strong>Apellido:</strong> <span id="lastName" name="lastName"></span></p>
+            <p><strong>Gamertag:</strong> <span id="gamertag" name="gamertag"></span></p>
+            <p><strong>Edad:</strong> <span id="age" name="age"></span></p>
+            <p><strong>Puntos Obtenidos:</strong> <span id="points" name="points"></span></p>
+            <p><strong>Nivel:</strong> <span id="level" name="level"></span></p>
+            
+            
+            <!--Barra de progreso(Nivel)-->
+            <div class="progress">
+                <div id="progressBar" name="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+        <!--Fin de muestra de datos-->
+
+
+    </div>
+    <!--Fin del contenedor-->
+
+
+
+    <!--Referencia JS-->
+    <script src="JS/perfil.js"></script>
+</body>
+</html>

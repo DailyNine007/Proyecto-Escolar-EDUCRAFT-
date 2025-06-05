@@ -1,0 +1,22 @@
+Pasos para conectar tu BD en tu XAMPP:
+1- Arrastra tu proyecto a la carpeta de htdocs de tu Xampp, para eso selecciona en tu Xampp "Explorer" y despues abres la carpeta htdocs para meter tu proyecto
+
+2-Le das start en el modulo de Apache y MySql
+
+3-Crea una tabla nueva en la base de datos de phpMyAdmin
+para eso le das en Nueva con el nombre de "Usuarios" y le das en crear(igual dejalo como utf8mb4-general-ci)
+
+4-Te vas en el apartado de SQL y pones el siguiente codigo
+CREATE TABLE registro (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  correo VARCHAR(100) NOT NULL,
+  contraseña VARCHAR(255) NOT NULL
+  nombre VARCHAR(64) NOT NULL
+);
+
+Le das en Continuar y se te creara la tabla
+
+5-Listo xd, ya tienes tu base de datos conectado y en el script viene comentado
+
+
+

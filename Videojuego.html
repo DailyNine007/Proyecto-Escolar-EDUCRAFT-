@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuego</title>
+
+    <!--Vinculacion con archivo CSS-->
+    <link rel="stylesheet" href="estilos/Videojuego.css">
+
+</head>
+
+<body>
+
+
+    <div id="game-container">
+
+        <button id="home-button" class="game-button" style="display: none;">Pagina Principal</button>
+
+        <!--Sonido de menu principal-->
+        <audio id="game-audio" autoplay loop>
+            <source src="Sonidos/Crash-Bandicoot.mp3" type="audio/mpeg">
+        </audio>
+
+        <!--Sonido de respuesta correcta-->
+        <audio id="correct-answer-audio">
+            <source src="Sonidos/Respuesta-Correcta.mp3" type="audio/mpeg">
+        </audio>
+
+        <!--Sonido de respuesta incorrecta-->
+        <audio id="wrong-answer-audio">
+            <source src="Sonidos/respuesta-incorrecta corta.mp3" type="audio/mpeg">
+        </audio>
+
+        <!--Sonido de Level Up-->
+        <audio id="level-up-sound">
+            <source src="Sonidos/level-up 2.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <!--Inicio de menu principal-->
+        <div id="intro-screen">
+            <h1>EDUcraft</h1>
+            <button id="start-game-button" class="game-button">Matematicas</button>
+        </div>
+    
+
+        <!--Menu de Matematicas-->
+        <div id="game-screen" style="display: none;">
+            <h1 id="game-title">EDUcraft</h1>
+            <div id="game-menu" style="display: none;">
+                <button id="back-button" class="game-button">Atras</button>
+                <button id="level1-button" class="level-button">Nivel 1</button>
+                <button id="level2-button" class="level-button">Nivel 2</button>
+                <button id="level3-button" class="level-button">Nivel 3</button>
+                <button id="level4-button" class="level-button">Nivel 4</button>
+            </div>
+        </div>
+
+
+        <!--Barra de progreso y nivel de jugador-->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+            <div id="player-level">Nivel: 1</div>
+        </div>
+            <div id="timer" style="position: absolute; top: 20px; right: 20px; font-size: 24px; color: white;"></div>
+            <canvas id="gameCanvas" style="display: none;"></canvas>
+
+
+             <!--Barra de Volumen-->
+         <div id="volume-control-container">
+            <label for="volume-control">Volumen:</label>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5">
+        </div>
+       
+        
+    </div>
+
+    <!-- Botón para cambiar el temporizador -->
+    <button id="change-timer-button" style="display: none;">Finalizar</button>
+
+<!--Vinculacion con JS-->
+<script src="JS/Videojuego.js"></script>
+
+</body>
+
+
+</html>

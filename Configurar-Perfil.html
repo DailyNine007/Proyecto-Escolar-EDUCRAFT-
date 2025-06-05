@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Titulo de Pagina-->
+    <title>Configuracion De Perfil</title>
+
+    <!--Referencia CSS-->
+    <link rel="stylesheet" href="estilos/Configurar-Perfil.css">
+    
+
+    <!--Recurso de iconos(API MATERIAL SYMBOLS)-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+
+
+<!--Cuerpo de la Pagina-->
+<body>
+
+    <!--Boton(Esquina superior derecha) para dirigir a pagina principal-->
+    <button class="Pagina-Principal"> <a href="Pagina_Principal.html">Página Principal</a></button>
+
+
+
+    <!--Boton(Esquina superior izquierda) para dirigir a perfil de jugador-->
+    <a href="Perfil.html" class="Configuracion-Perfil"><span class="material-symbols-outlined">
+        account_box</span></a>
+
+
+
+       <!--Botón para cambiar de Avatar-->
+    <div class="Avatar">
+        <button id="prev-avatar" class="avatar-button">←</button>
+        <div class="avatar-container">
+            <img id="avatar" src="estilos/imagenes/Fuego_fase1.jpg" alt="Avatar">
+            <button id="select-avatar" class="avatar-button">Seleccionar Avatar</button>
+            <button id="evolve-avatar" class="avatar-button">Evolucionar personaje</button>
+        </div>
+        <button id="next-avatar" class="avatar-button">→</button>
+    </div>
+
+
+    
+
+        
+
+
+        
+        <div class="Contenedor-General">
+            <!--Titulo de Fomulario-->
+            <h1>Configuracion De Perfil</h1>
+
+            
+
+            <!--Titulo y/o referencia del formulario-->
+            <form id="profileForm" class="horizontal-form" enctype="multipart/form-data"></form>
+
+
+
+                <!--Refencias del campo (Nombre de padre/Tutor)-->
+                <div class="formulario-grupo">
+                    <label for="parentName">Nombre de Padre/Tutor:</label>
+                    <input type="text" id="parentName" name="parentName" placeholder="Padre o Tutor" required>
+                </div>
+                
+                <!--Refencias del campo (Nombre alumno)-->
+                <div class="formulario-grupo">
+                    <label for="firstName">Nombre:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Nombre" required>
+                </div>
+            
+                <!--Refencias del campo (Apellido)-->
+                <div class="formulario-grupo">
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Apellido" required>
+                </div>
+            
+                <!--Refencias del campo (Gamertag)-->
+                <div class="formulario-grupo">
+                    <label for="gamertag">Gamertag:</label>
+                    <input type="text" id="gamertag" name="gamertag" placeholder="Gamertag" required>
+                </div>
+            
+                <!--Refencias del campo (Edad)-->
+                <div class="formulario-grupo">
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" name="age" required min="1" max="100" placeholder="Edad">
+                </div>
+
+                <!--(Imagen de perfil)Seleccion de imagen desde el equipo en uso. Funcion para carga de imagen (JS)-->
+                <div class="formulario-grupo">
+                    <label for="profileImage">Imagen de Perfil:</label>
+                    <input type="file" id="profileImage" name="profileImage" placeholder="" accept="image/*" onchange="previewImage()">
+                </div>
+            
+
+
+
+                <!--Boton guardar Perfil (Funcion de guardado con JS)-->
+                <button type="button" onclick="submitProfile()">Guardar</button>
+            </form>
+            <!--Fin del formulario-->
+
+
+
+            <!--Mostrar datos despues de guardar perfil (Codigo en el archivo JS con el nombre const profileOutput)-->
+            <div id="profileOutput" class="profile-output">
+                <img id="profilePic" name="profilePic" src="" alt="Imagen de Perfil" style="display:none;">
+                <div id="profileOutput" style="display:none;"></div>
+            </div>
+
+
+        </div>
+        <!--Fin del contenedor-->
+
+        
+        <!--Referencia JS (Simpre al final del archivo)-->
+        <script src="JS/Configurar-Perfil.js"></script>
+</body>
+</html>
